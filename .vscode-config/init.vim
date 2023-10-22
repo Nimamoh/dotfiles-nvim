@@ -20,6 +20,13 @@ Plug 'chaoren/vim-wordmotion'
 Plug 'justinmk/vim-sneak'
 Plug 'rhysd/clever-f.vim'
 Plug 'tpope/vim-surround'
+
+" Testing these
+Plug 'wellle/targets.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-entire'
+Plug 'Matt-A-Bennett/vim-surround-funk'
 call plug#end()
 
 "
@@ -40,6 +47,19 @@ let g:sneak#label = 1
 
 " Sync vim yanking with system clipboard
 set clipboard=unnamedplus
+
+"
+" Missing vscode integration
+"
+
+""""" Folds
+nnoremap zM :call VSCodeNotify('editor.foldAll')<CR>
+nnoremap zR :call VSCodeNotify('editor.unfoldAll')<CR>
+nnoremap zc :call VSCodeNotify('editor.fold')<CR>
+nnoremap zC :call VSCodeNotify('editor.foldRecursively')<CR>
+nnoremap zo :call VSCodeNotify('editor.unfold')<CR>
+nnoremap zO :call VSCodeNotify('editor.unfoldRecursively')<CR>
+nnoremap za :call VSCodeNotify('editor.toggleFold')<CR>
 
 "
 " Integration with spacecode
