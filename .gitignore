@@ -3,3 +3,6 @@
 .binaries/*
 !.binaries/.gitkeep
 nvim-vscode
+
+*.py
+.venv
